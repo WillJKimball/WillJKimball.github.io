@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/1668bdc387.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="Images/logo.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text"></div>
+        <p>Second Year Student at UVA</p>
+        <h1>Hi, I'm <span>Will Kimball</span><br>From Scituate, Massachusetts</h1>
+    </div>
+</div>  
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="Images/IMG_4393.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Computer Science and Applied Statistics Double Major</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Regression Analysis</span><br>Machine Learning</li>
+                        <li><span>Python</span><br>Profficiency</li>
+                        <li><span>R</span><br>RStudio Profficiency</li>
+                        <li><span>Java</span><br>Working Toward Profficiency</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Statistical Analysis</span><br>RStudio</li>
+                        <li><span>Introduction to Programming</span><br>Python</li>
+                        <li><span>Calculus II</span><br>Computation</li>
+                        <li><span>Regression Analysis</span><br>RStudio</li>
+                        <li><span>Foundation of Statistics</span><br>Statistics</li>
+                        <li><span>Data Sctructures and Algorithms</span><br>Java</li>
+                        <li><span>Discrete Math and Theory</span><br>Math and Theory</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 
+
+<div id="Portfolio">
+    <div class="container">
+        <h1 class="sub-title"> My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="Images/gonzaga-bulldogs-saint-marys-gaels52.jpeg">
+                <div class="layer">
+                    <h3>Project1</h3>
+                    <p>College to NBA</p>
+                    <a href="https://github.com/WillJKimball/CollegetoNBA.git"><i class="fas fa-link" style="color: #f06c14;"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Images/work111.jpeg">
+                <div class="layer">
+                    <h3>...</h3>
+                    <p>Project Coming</p>
+                    <a href="#"><i class="fas fa-link" style="color: #f06c14;"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Images/work111.jpeg">
+                <div class="layer">
+                    <h3>...</h3>
+                    <p>Project Coming</p>
+                    <a href="#"><i class="fas fa-link" style="color: #f06c14;"></i></a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="BTN">See More</a>
+    </div>
+</div>
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p>willkimball8@gmail.com</p>
+                <p>vtw2jv@virginia.edu</p>
+                <div class="social-icons">
+                    <a href="www.linkedin.com/in/will-kimball-6a4198268"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var tablinks = document.getElementsByClassName("tab-links")
+    var tabcontents = document.getElementsByClassName("tab-contents")
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link")
+        document.getElementById(tabname).classList.add("active-tab")
+
+    }
+</script> 
+</body>
+</html>
